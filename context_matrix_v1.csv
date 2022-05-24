@@ -1,0 +1,92 @@
+Context,Input_Factors,Qual_or_Quantitative,Levels / Variables,Subvariables,Publications,Factor Explanation,Principles,Putative Causality,Notes,author
+Construct,TU number,quantitative,"1, 2, 3, ... , n",,,,,,,Camillo
+Construct,Promoter modulation,quantitative,RNAP/promoter/sec,,,different levels of promoter strength,,,,Camillo
+Construct,RBS modulation,quantitative,ribosome/RBS/sec,,Qian et al. 2017,different levels of RBS strenght,,,,Camillo
+Construct,Promoter context insulation,,transcription start site (1+) position,,"Lou et al. 2012, Nielsen et al. 2016",,Ribozyme-based insulation of 5'-UTRs and CDSs from promoters relieves promoter context effects,,"""B&V: Failure Mode""",Camillo
+Construct,Part Junction Interference,,arising promoter,,Yao et al. 2013,,,,,
+Construct,mRNA half-life modulation,,5'-UTR mods|3'-UTR mods,,,transcript UTRs (5' and 3') can be modified to extend or reduce half-life,,,,Camillo
+Construct,Protein half-life modulation,,degradation tag|no degredation tag,"native':{'ssrA':{'original':'LVA', 'variant1':'LAA', ...}}",,host- or orthogonal-specific degradation tags can reduce half-life while protein fusions to specific tags or other proteins can extend the half-life,,,,Camillo
+Construct,Orthogonal protein degredation,,mf-Lon,,Cameron et al. 2014,construct-specific use of an orthogonal protein degredation machinery can decouple degradation dependence from a host,,,,Camillo
+Construct,Multi-Level Expression Control,,"transcription-control, translation-control, dual-control",,Greco et al. 2021,a TU's expression can be simultaneously regulated at the transcription level (e.g. using TFs) and at the translation level (e.g. using interfering RNAs),"Gene expression control can be enhanced through simultaneous control of expression on the transcription and translation level using regulator pairs (factor transcription: repressor, activator] | factor translation: [THS, STAR])",,,Camillo
+Construct,Protein Titration/Decoy Operators,,,,"Brophy & Voigt 2014, Potvin-Trottier et al. 2016",protein characterisitics like K_d can be modified using decoy operators which titrate away the pool of available protein,,,,Camillo
+Construct,Protein Titration/Protein Sequestering,,,,,"similar to above but instead of using decoy operators antagonistic proteins bind directly and sequester a protein, reducing the pool of available protein",,,,Camillo
+Construct,Anti-sense transcription interference,,,,Gorochowski et al. 2017,Unknown reverse promoters emerging out of the CDS of a TU interfere with sense transcription of that TU,,cryptic promoters inside CDS regions due to codon usage for that CDS,,Charlie
+Construct,Transcription read-through,,,,,Weak terminators lead to TX beyond the boundaries of a TU and into a down-stream TU; this can be harnessed for multi-TU control by thinking of this factor as a 'transcriptional valve',,,"""B&V: Failure Mode""",Camillo
+Construct,Constrtuct Part orthogonality,,,,"Butzin & Mather 2017, Meyers et al. 2019","parts of a designed construct can interfere with one another, affecting their desired output",,,,Camillo
+Construct,Gene Dosage,,no. of TUs,,Qian et al. 2017,number of repeats of a gene inside a construct,,,,Charlie
+Construct,Overlapping Gene,,overlapping|non-overlapping,,,two TUs can overlap,,,,Camillo
+Construct,Construct Compartmentalisation,,protein microcompartments,,Kerfeld et al. 2018,a construct can create its own micro-environmental in which it is intended to operate,,,,
+Construct,Codon optimisation,,,,,CDS codon use can be optimised to reduce or enhance TL efficiency,,,,
+Construct,Genetic stability,,,,Sleight et al. 2010,,,,,Charlie
+Construct,Relative Gene Orientation,,Convergent|Divergent|Tandem,,Yeung et al. 2017,400% higher dynamic range recorded between synthetic convergent than divergent repression systems,Higher dynamic range between synthetic convergent than divergent repression systems | hierarchy of 2-gene-orientations in regards to dynamic range: convergent - tandem - divergent,Comp. model by authors identifies plectoneme formation and supercoiling effects as structural mechanisms behind RNAP accessiblity effects,,Camillo
+Construct,Frameshifting,,,,Anzalone et al. 2021,,,,,
+Construct,uORF Noise Reduction,,,,Wu et al. 2022,reduction in the noise of a main ORF through an upstream ORF in eukaryotes,,,,Camillo
+Construct-Environment,Temperature sensitive regulation,,,,Hussain et al. 2014,Use of a temperature sensitive repressor mutants can control gene expression through thermoinduction (inductive tuning and arrhenius scaling cancel out to give compensation),Temperature sensitive lactose repressor mutant used to stabilise a dual feedback oscillator period to 48 minutes over temperature range 30oC to 41oC,Single amino acid substitution on the lac repressor protein gives temperature sensitive behaviour,,Charlie
+Host,Host type,qualitative,"{'domains of life': {'bacterium': {...}, 'archea': {...}, 'eukaryotes': {...}}}",,,,,,,Camillo
+Host,Metabolic category,qualitative,photoautotroph|photoheterotroph|chemoautotroph|chemoheterotroph,,,,,,,Camillo
+Host,Growth capabilities ,qualitative,aerobic|anaerobic,,,,,,,Camillo
+Host,RNAP availability,quantitative,number at nutrient availability stage,,Kim et al. 2020,,,,,Camillo
+Host,Ribosome availability,quantitative,number at nutrient availability stage,,Kim et al. 2020,,,,,Camillo
+Host,Sigma factor availability,"qualitative (first instance), quantitative (further on)",,,Kim et al. 2020,,,,,
+Host,Protease availability,"qualitative (first instance), quantitative (further on)",,,"Kim et al. 2020, Prindle et al. 2014",Competition for a limited number of proteases can create post translational coupling of gene circuits ,,,,
+Host,RNAase availability,"qualitative (first instance), quantitative (further on)",,,Kim et al. 2020,,,,,
+Host,tRNA availability,"qualitative (first instance), quantitative (further on)",,,Kim et al. 2020,,,,,
+Host,Chaperone availability,"qualitative (first instance), quantitative (further on)",,,Kim et al. 2020,,,,,
+Host,Growth (/dilution) rate,quantitative,,,"Alon, 2019 (textbook)",Increasing the growth rate increases the rate at which molecules are removed by dilution,"For constitutively expressed proteins, the steady state protein concentration is given by the production rate divided by the removal rate, where removal rate = dilution rate + degradation rate",,,Camillo
+Host,(Host) Transcriptional Propensity,quantitative,RNA/DNA ratio (/env. condition),,Scholz et al. 2019,,"Genomic locations exhibit an inherent propensity to be transcribed based on the cell's nutrient and therefore global gene regulation state, as a function of ",,,Camillo
+Host,Genome Context Insulation ,"qualitative (first instance), quantitative (further on)",,,Park et al. 2020,,,,,Camillo
+Host,Percentage of native genes with known function,quantitative,,,,,,,,Camillo
+Host,Motile or Stationary,qualitative,,,,,,,,Camillo
+Host,Background mutation rate,quantitative,,,,,,,,Charlie
+Host,Senescence and aging,,,,,,,,,
+Host,Host Compartmentalisation,qualitative,"Subcellular organisation: organelles, vesicles, phase separation",,,,,,,Camillo
+Host,Genome sequence,,,,,,,,,
+Host,Epigenetic modifications,,,,,,,,,
+Host,Transcriptome composition,,,,,,,,,
+Host,Proteome composition,,,,,,,,,
+Host,Cell size,,,,,,,,,
+C - H - E,Retroactivity,,,,,,,,,Camillo
+C - H - E,Burden,,,,,,,,,Camillo
+Construct - Host,,,,,,,,,,
+Construct - Host,Construct-Host Part Orthagonality,,,,,,,,,Camillo
+Construct - Host,(Construct-Host) Recombination,,,,,,,,,Camillo
+Construct - Host,Construct location,,Plasmid|Genome,,,,,,,Camillo
+Construct - Host,Copy number maintenance,,PCN/cell/env. condition,,"Lee et al. 2016, Qian et al. 2017",,,,,Camillo
+Construct - Host,Protein Queuing,,,,"Cookson et al. 2011, Del Vecchio et al. 2018","Processing (e.g. degredation, transmembrane transport, PTM, ...) of a heterologous protein is competing with endogenous proteins, leading to both of them being ""queued"" ",,,,
+Construct - Host,Cross-host functionality,,broad-spectrum|narrow-spectrum|single-spectrum,,Yang et al. 2017,,,,list of hosts where construct is functional,
+Environment,pH,Quantitative,,,,,,,Physical,Charlie
+Environment,Temperature,Quantitative,,,Huang et al. 2011; Stricker et al. 2008,"Temperature affects enzyme kinetics, globally governing biochemical reaction rates, which in turn also affects growth rates",,,Physical,Charlie
+Environment,Pressure,Quantitative,,,"Kumar et al. 2013, Qin et al. 2021",,,,,
+Environment,Carbon availability,Quantitative,Carbon source|glucose|glycerol|acetate|sequential|simultaneous|limiting,,Neidhardt et al. 1974,,,,Chemical|Macronutrient,Charlie
+Environment,Sulfate availability,Quantitative,,,Neidhardt et al. 1974,,,,Chemical|Macronutrient,Charlie
+Environment,Phosphate availability,Quantitative,,,Neidhardt et al. 1974,,,,Chemical|Macronutrient,Charlie
+Environment,Nitrogen availability,Quantitative,,,Neidhardt et al. 1974,,,,Chemical|Macronutrient,Charlie
+Environment,Magnesium availability,Quantitative,,,Neidhardt et al. 1974,,,,Chemical|Macronutrient,Charlie
+Environment,Calcium availability,Quantitative,,,Neidhardt et al. 1974,,,,Chemical|Macronutrient,Charlie
+Environment,Iron availability,Quantitative,,,Neidhardt et al. 1974,,,,Chemical|Macronutrient,Charlie
+Environment,Dissolved oxygen,Quantitative,,,,,,,Chemical|Gas,Charlie
+Environment,Dissolved CO2,Quantitative,,,Neidhardt et al. 1974,,,,Chemical|Gas,Charlie
+Environment,Copper availability,Quantitative,,,Neidhardt et al. 1974,,,,Chemical|Micronutrient,Charlie
+Environment,Cobalt availability,Quantitative,,,Neidhardt et al. 1974,,,,Chemical|Micronutrient,Charlie
+Environment,Manganese availability,Quantitative,,,Neidhardt et al. 1974,,,,Chemical|Micronutrient,Charlie
+Environment,Borate availability,Quantitative,,,Neidhardt et al. 1974,,,,Chemical|Micronutrient,Charlie
+Environment,Molybdenum availability,Quantitative,,,Neidhardt et al. 1974,,,,Chemical|Micronutrient,Charlie
+Environment,Zinc availability,Quantitative,,,Neidhardt et al. 1974,,,,Chemical|Micronutrient,Charlie
+Environment,NaCl concentration,Quantitative,,,Neidhardt et al. 1974,,,,Chemical|Micronutrient,Charlie
+Environment,Ionic strength,Quantitative,,,Neidhardt et al. 1974,,,,Physical,Charlie
+Environment,Osmolarity,Quantitative,,,,,,,Physical,Charlie
+Environment,Buffer choice,Qualitative,MOPS|Tris|EDTA|available as nutrient source,,Neidhardt et al. 1974,,,,Chemical|Other,Charlie
+Host - Environment,Cross-nutrient requirements,,Need for iron in acetate metabolism in E.coli B (this is actually an interaction effect),,Neidhardt et al. 1974,,,,,
+Environment,Media sterilisation method,Qualitative,Filter|Autoclave (induces variability which is hard to quantify),,Neidhardt et al. 1974,,,,,
+Environment,Light,Quantitative,wavelength|intensity,,,,,,,
+Environment,Environment geometry,Qualitative,Bulk|Microfluidic device|Agar pad,,,,,,,
+Environment,Culture type,Qualitative,Air-liquid|Liquid|Solid-liquid|Solid|Solid-air,,Gilbert et al. 2021,,,,,
+Environment,Physical  and mechanical properties of the environment,Qualitative/Quantitative,Surface chemistry|Young's Modulus|Roughness|Material,,,,,,,
+Environment,Fluid properties,Quantitative,"Solvent (oil or water, droplet based) Viscosity|Heat capacity (these two typically a function of the solutes present in water)",,,,,,,
+Environment,Ecological interaction modes,Qualitative,Monoculture|Polyculture,Predation|Cannibalism|Group-beneficial behaviours|Division of Labour,,,,,,
+Environment,Culture density,Quantitative,Low|High,,,,,,,
+Environment ,Inducer concentration,Quantitative,,,,,,,,
+Environment,Electromagnetic field strength,Quantitative,Electric field strength|Magnetic field strength,,,,,,,
+Environment,Radiation,Quantitative,Visible light|Radiation intensity and spectra|alpha radiation|beta radiation,,,,,,,
+Environment,Antibiotic concentration,,,,,,,,,
+Environment,Signalling molecule concentration,,,,,,,,,
