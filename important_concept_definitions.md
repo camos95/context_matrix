@@ -1,4 +1,4 @@
-__Important Concepts Definitions__
+__Important Concept Definitions__
   - **Biosystem** - Any system composed of biological entities and their surrounding environment, bounded within a region of space. For example, a culture of a microorganism and its growth media within a
 fermentation vessel, or the complex consortia of organisms living in a volume of soil. 
   - **Engineered Biosystem** - A biosystem containing at least one synthetic, designed biological component with an intended function. For example, a culture of a microorganism containing
