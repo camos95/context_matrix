@@ -54,17 +54,17 @@ Construct - Host,Construct location,,Plasmid|Genome,,,,,,,Camillo
 Construct - Host,Copy number maintenance,,PCN/cell/env. condition,,"Lee et al. 2016, Qian et al. 2017",,,,,Camillo
 Construct - Host,Protein Queuing,,,,"Cookson et al. 2011, Del Vecchio et al. 2018","Processing (e.g. degredation, transmembrane transport, PTM, ...) of a heterologous protein is competing with endogenous proteins, leading to both of them being ""queued"" ",,,,
 Construct - Host,Cross-host functionality,,broad-spectrum|narrow-spectrum|single-spectrum,,Yang et al. 2017,,,,list of hosts where construct is functional,
-Environment,pH,Quantitative,,,,,,,Physical,Charlie
-Environment,Temperature,Quantitative,,,Huang et al. 2011; Stricker et al. 2008,"Temperature affects enzyme kinetics, globally governing biochemical reaction rates, which in turn also affects growth rates",,,Physical,Charlie
-Environment,Pressure,Quantitative,,,"Kumar et al. 2013, Qin et al. 2021",,,,,
-Environment,Carbon availability,Quantitative,Carbon source|glucose|glycerol|acetate|sequential|simultaneous|limiting,,Neidhardt et al. 1974,,,,Chemical|Macronutrient,Charlie
-Environment,Sulfate availability,Quantitative,,,Neidhardt et al. 1974,,,,Chemical|Macronutrient,Charlie
-Environment,Phosphate availability,Quantitative,,,Neidhardt et al. 1974,,,,Chemical|Macronutrient,Charlie
-Environment,Nitrogen availability,Quantitative,,,Neidhardt et al. 1974,,,,Chemical|Macronutrient,Charlie
-Environment,Magnesium availability,Quantitative,,,Neidhardt et al. 1974,,,,Chemical|Macronutrient,Charlie
-Environment,Calcium availability,Quantitative,,,Neidhardt et al. 1974,,,,Chemical|Macronutrient,Charlie
-Environment,Iron availability,Quantitative,,,Neidhardt et al. 1974,,,,Chemical|Macronutrient,Charlie
-Environment,Dissolved oxygen,Quantitative,,,,,,,Chemical|Gas,Charlie
+Environment,pH,Quantitative,,,Davey 1994; doi: 10.1016/0168-1605(94)90158-9,"A measure of the hydrogen ion activity in solution (Covington et al., 1985). Different microorganisms have different optimal growth pH values.",,,Physical,Charlie
+Environment,Temperature,Quantitative,,,Huang et al. 2011; Stricker et al. 2008,"Temperature affects enzyme kinetics, globally governing biochemical reaction rates, which in turn also affects growth rates.",,,Physical,Charlie
+Environment,Pressure,Quantitative,,,Kumar et al. 2013; doi: 10.1016/j.bpj.2013.06.029 | Qin et al. 2021; 10.1126/sciadv.abf9941,,,,,
+Environment,Carbon availability,Quantitative,glucose|glycerol|acetate ,,Neidhardt et al. 1974,The type and concentration of carbon source available.,,,Chemical|Macronutrient,Charlie
+Environment,Sulfur availability,Quantitative,,,Neidhardt et al. 1974,The type and concentration of sulfur source available.,,,Chemical|Macronutrient,Charlie
+Environment,Phosphorus availability,Quantitative,,,Neidhardt et al. 1974,The type and concentration of phosphorus source available.,,,Chemical|Macronutrient,Charlie
+Environment,Nitrogen availability,Quantitative,,,Neidhardt et al. 1974,The type and concentration of nitrogen source available.,,,Chemical|Macronutrient,Charlie
+Environment,Magnesium availability,Quantitative,,,Neidhardt et al. 1974,The type and concentration of magnesium source available.,,,Chemical|Macronutrient,Charlie
+Environment,Calcium availability,Quantitative,,,Neidhardt et al. 1974,The type and concentration of calcium source available.,,,Chemical|Macronutrient,Charlie
+Environment,Iron availability,Quantitative,,,Neidhardt et al. 1974,The type and concentration of iron source available.,,,Chemical|Macronutrient,Charlie
+Environment,Dissolved oxygen,Quantitative,,,Baez & Shiloach 2014; doi: 10.1186/s12934-014-0181-5,Dissolved oxygen in a liquid media is generally required for aerobic growth. High dissolved oxygen concentrations can create oxidative stress. ,,,Chemical|Gas,Charlie
 Environment,Dissolved CO2,Quantitative,,,Neidhardt et al. 1974,,,,Chemical|Gas,Charlie
 Environment,Copper availability,Quantitative,,,Neidhardt et al. 1974,,,,Chemical|Micronutrient,Charlie
 Environment,Cobalt availability,Quantitative,,,Neidhardt et al. 1974,,,,Chemical|Micronutrient,Charlie
@@ -74,19 +74,21 @@ Environment,Molybdenum availability,Quantitative,,,Neidhardt et al. 1974,,,,Chem
 Environment,Zinc availability,Quantitative,,,Neidhardt et al. 1974,,,,Chemical|Micronutrient,Charlie
 Environment,NaCl concentration,Quantitative,,,Neidhardt et al. 1974,,,,Chemical|Micronutrient,Charlie
 Environment,Ionic strength,Quantitative,,,Neidhardt et al. 1974,,,,Physical,Charlie
-Environment,Osmolarity,Quantitative,,,,,,,Physical,Charlie
+Environment,Osmolarity,Quantitative,,,Konopka et al. 2009,,E. coli MG1655 has a maximum growth rate in MOPS buffered glucose minimal media (as per Neidhardt et al. 1974) at an osmolarity of 0.28 osmol,,Physical,Charlie
 Environment,Buffer choice,Qualitative,MOPS|Tris|EDTA|available as nutrient source,,Neidhardt et al. 1974,,,,Chemical|Other,Charlie
-Host - Environment,Cross-nutrient requirements,,Need for iron in acetate metabolism in E.coli B (this is actually an interaction effect),,Neidhardt et al. 1974,,,,,
+Host - Environment,Cross-nutrient requirements,Qualitative,,,Neidhardt et al. 1974,"For some host cells, certain nutrients can only be metabolised if other nutrients are present. For example, the need for iron in acetate metabolism in E.coli B.",,,,
+Host - Environment,Nutrient usage order,Qualitative,sequential|simultaneous,,Neidhardt et al. 1974,"For a given host-environment combination, certain nutrient sources (e.g. two sulfur sources, or two carbon sources) may be used simultaneously or sequentially, assuming the organism can utilise them.",,,,
+Host - Environment,Limiting nutrient,Qualitative,A given nutrient which will be exhausted first,,Neidhardt et al. 1974,"For a given host-environment combination, one nutrient source could become growth limiting (e.g., the carbon, nitrogen, or sulfur source could run out first). Knowledge of the system could allow a designer to plan this.",,,,
 Environment,Media sterilisation method,Qualitative,Filter|Autoclave (induces variability which is hard to quantify),,Neidhardt et al. 1974,,,,,
 Environment,Light,Quantitative,wavelength|intensity,,,,,,,
 Environment,Environment geometry,Qualitative,Bulk|Microfluidic device|Agar pad,,,,,,,
 Environment,Culture type,Qualitative,Air-liquid|Liquid|Solid-liquid|Solid|Solid-air,,Gilbert et al. 2021,,,,,
 Environment,Physical  and mechanical properties of the environment,Qualitative/Quantitative,Surface chemistry|Young's Modulus|Roughness|Material,,,,,,,
 Environment,Fluid properties,Quantitative,"Solvent (oil or water, droplet based) Viscosity|Heat capacity (these two typically a function of the solutes present in water)",,,,,,,
-Environment,Ecological interaction modes,Qualitative,Monoculture|Polyculture,Predation|Cannibalism|Group-beneficial behaviours|Division of Labour,,,,,,
+Environment,Ecological interaction modes,Qualitative,Monoculture|Polyculture,Competition|Predation|Cannibalism|Mutualism|Commensalism|Parasitism,,,,,,
 Environment,Culture density,Quantitative,Low|High,,,,,,,
 Environment ,Inducer concentration,Quantitative,,,,,,,,
-Environment,Electromagnetic field strength,Quantitative,Electric field strength|Magnetic field strength,,,,,,,
+Environment,Electromagnetic field strength,Quantitative,Electric field strength|Magnetic field strength,,"Comerci et al., 2022",,,,,
 Environment,Radiation,Quantitative,Visible light|Radiation intensity and spectra|alpha radiation|beta radiation,,,,,,,
-Environment,Antibiotic concentration,,,,,,,,,
-Environment,Signalling molecule concentration,,,,,,,,,
+Environment,Antibiotic concentration,Quantitative,,,,,,,,
+Environment,Signalling molecule concentration,Quantitative,,,,,,,,
